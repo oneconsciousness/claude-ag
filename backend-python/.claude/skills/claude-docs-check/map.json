@@ -1,0 +1,78 @@
+{
+  "base": "main",
+  "artifact_prefixes": [
+    ".claude/",
+    "CLAUDE.md",
+    "CONTRIBUTING.md"
+  ],
+  "triggers": [
+    {
+      "paths": [
+        ".github/workflows/*",
+        "Dockerfile",
+        "scripts/*"
+      ],
+      "artifacts": [
+        "CLAUDE.md (Branches and deploy)",
+        ".claude/rules/git-and-prs.md",
+        "CONTRIBUTING.md (section 1)"
+      ]
+    },
+    {
+      "paths": [
+        "config.py",
+        ".env.example"
+      ],
+      "artifacts": [
+        "CLAUDE.md (Config)"
+      ]
+    },
+    {
+      "paths": [
+        "main.py",
+        "api/*"
+      ],
+      "artifacts": [
+        "CLAUDE.md (Where things are)"
+      ]
+    },
+    {
+      "paths": [
+        "alembic/*",
+        "db/*"
+      ],
+      "artifacts": [
+        ".claude/rules/database.md"
+      ]
+    },
+    {
+      "paths": [
+        "tests/conftest.py",
+        "pytest.ini",
+        ".github/workflows/ci.yml"
+      ],
+      "artifacts": [
+        ".claude/rules/testing.md",
+        ".claude/skills/verify/SKILL.md"
+      ]
+    },
+    {
+      "paths": [
+        "pyproject.toml",
+        "uv.lock"
+      ],
+      "artifacts": [
+        "CLAUDE.md (Commands)"
+      ]
+    },
+    {
+      "paths": [
+        ".claude/*",
+        "CLAUDE.md"
+      ],
+      "artifacts": [
+        ".claude/skills/claude-docs-check/map.json"
+      ]
+    }
+  ]
+}

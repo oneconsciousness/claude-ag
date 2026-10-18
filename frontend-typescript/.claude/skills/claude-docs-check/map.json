@@ -1,0 +1,82 @@
+{
+  "base": "main",
+  "artifact_prefixes": [
+    ".claude/",
+    "CLAUDE.md",
+    "CONTRIBUTING.md",
+    "src/types/CLAUDE.md",
+    "src/components/CLAUDE.md"
+  ],
+  "triggers": [
+    {
+      "paths": [
+        ".github/workflows/*",
+        "scripts/*"
+      ],
+      "artifacts": [
+        "CLAUDE.md (Branches and deploy)",
+        ".claude/rules/git-and-prs.md",
+        "CONTRIBUTING.md (section 1)"
+      ]
+    },
+    {
+      "paths": [
+        "package.json",
+        "bun.lock",
+        "vite.config.ts",
+        "tsconfig.json",
+        "index.html",
+        "src/entries/*"
+      ],
+      "artifacts": [
+        "CLAUDE.md (Commands)",
+        "CLAUDE.md (Entries and runtime config)"
+      ]
+    },
+    {
+      "paths": [
+        "src/lib/runtime-config.ts",
+        ".env.example"
+      ],
+      "artifacts": [
+        "CLAUDE.md (Config)"
+      ]
+    },
+    {
+      "paths": [
+        "src/components/*"
+      ],
+      "artifacts": [
+        "src/components/CLAUDE.md"
+      ]
+    },
+    {
+      "paths": [
+        "src/types/*"
+      ],
+      "artifacts": [
+        "src/types/CLAUDE.md",
+        ".claude/rules/typescript.md"
+      ]
+    },
+    {
+      "paths": [
+        "src/test/*",
+        "vitest.config.ts"
+      ],
+      "artifacts": [
+        ".claude/rules/testing.md",
+        ".claude/skills/verify/SKILL.md"
+      ]
+    },
+    {
+      "paths": [
+        ".claude/*",
+        "CLAUDE.md"
+      ],
+      "artifacts": [
+        ".claude/skills/claude-docs-check/map.json"
+      ]
+    }
+  ]
+}
